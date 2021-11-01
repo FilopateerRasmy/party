@@ -1,0 +1,108 @@
+#contact {
+  margin-top: 5rem;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba($secondry-color, 0.8),
+    rgba($primary-color, 0.8)
+  );
+  @include flex(column, center, center);
+  .contact-head {
+    letter-spacing: 2rem;
+    color: $white;
+    font-size: 3rem;
+    padding: 2rem 0rem;
+    @media only screen and(max-width: 500px) {
+      letter-spacing: 1rem;
+      font-size: 3rem;
+    }
+  }
+  .contact-container {
+    width: 100%;
+    @include flex(row, space-between, center);
+
+    .contact-text {
+      flex: 1 1 30rem;
+      text-align: center;
+      color: $white;
+      @include flex(column, flex-start, center);
+      padding: 0rem 2rem;
+      .contact-text-head {
+        font-size: 3rem;
+        padding: 2rem 0rem;
+      }
+      .contact-para {
+        font-size: 2rem;
+        padding: 2rem 0rem;
+      }
+      .contact-icon {
+        padding: 2rem 0rem;
+        li {
+          font-size: 2rem;
+          i {
+            margin-right: 1rem;
+            padding: 3rem 0rem;
+          }
+        }
+      }
+    }
+    .contact-form {
+      flex: 1 1 30rem;
+      padding: 0rem 1rem;
+      text-align: center;
+      .my-form {
+        width: 100%;
+        padding-top: 3rem;
+        @include flex(column, center, center);
+        %inputs {
+          width: 70%;
+          @media only screen and(max-width: 500px) {
+            width: 100%;
+          }
+          padding: 1.5rem 3rem;
+          border: none;
+          border-bottom: 1px solid $white;
+          outline: none;
+          border-radius: 10rem;
+          font-size: 2rem;
+          color: black;
+        }
+        #name {
+          @extend %inputs;
+          &::placeholder {
+            color: black;
+          }
+        }
+        #email {
+          @extend %inputs;
+          margin: 2rem 0rem;
+        }
+        #text-area {
+          @extend %inputs;
+          border-radius: 0;
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+        }
+        p {
+          color: $white;
+          font-size: 2rem;
+          padding: 2rem 0rem;
+          span {
+            color: red;
+            margin-right: 0.5rem;
+          }
+        }
+        button {
+          color: $primary-color;
+          background-color: white;
+          font-size: 2rem;
+          padding: 1rem 4rem;
+          border-radius: 10rem;
+          outline: none;
+          cursor: pointer;
+          margin: 2rem 0rem;
+        }
+      }
+    }
+  }
+}

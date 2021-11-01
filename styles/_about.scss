@@ -1,0 +1,48 @@
+#about{
+    padding-top: 3rem;
+    text-align: center;
+    width: 80%;
+    @media only screen and(max-width: 500px) {
+        width: 100%;
+    }
+    margin: auto;
+    h2{
+        font-size: 3rem;
+        letter-spacing: 1rem;
+        padding: 3rem 0rem;
+        @media only screen and(max-width: 500px) {
+            font-size: 2.5rem;
+        }
+    }
+   .accordion{
+    width: 60%;
+    @media only screen and(max-width: 500px) {
+        width: 95%;
+    }
+    margin: auto;
+    font-size: 3rem;
+    background-image: linear-gradient(
+        to right,
+        rgba(#000, 0.8),
+        rgba($primary-color, 0.8)
+      );
+      color: $white;
+    transform: skew(-15deg);
+    cursor: pointer;
+  
+
+    .singer-info{
+        font-size: 2.5rem;
+        max-height: 0;
+        transition: all 0.8s linear;
+        overflow: hidden;
+    }
+    .singer-info-modifyed{
+        max-height: 40rem;
+        transition: all 0.8s linear;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+    }
+    
+ 
+   }
+}

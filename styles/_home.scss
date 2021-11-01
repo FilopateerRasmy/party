@@ -1,0 +1,153 @@
+header {
+  background-image: linear-gradient(
+      to right,
+      rgba(#000, 0.8),
+      rgba($primary-color, 0.8)
+    ),
+    url(../images/pexels-wendy-wei-1190297.jpg);
+  width: 100%;
+  height: 95vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  overflow: hidden;
+  nav {
+    padding: 1.5rem 1.5rem;
+    min-height: 10vh;
+    @include flex(row, space-between, center);
+    .menu-logo {
+      .logo {
+        color: white;
+        font-family: "Pattaya", sans-serif;
+        font-size: 3rem;
+      }
+    }
+    .menu {
+      color: $white;
+      cursor: pointer;
+
+      .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 7.4vh;
+        background-color: rgba($white, 0.9);
+        text-align: center;
+        height: 70vh;
+        width: 20rem;
+        backface-visibility: hidden;
+        transition: all 0.5s linear;
+        z-index: 1000;
+        .navbar {
+          height: 100%;
+          @include flex(column, center, center);
+          li {
+            margin-bottom: 4rem;
+            .nav-links {
+              color: $primary-color;
+              font-size: 2rem;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-head {
+    color: $white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .main--head {
+      font-size: 4rem;
+      font-weight: 400;
+      letter-spacing: 1rem;
+      font-weight: 700;
+      backface-visibility: hidden;
+      animation: moveRight 1s linear;
+    }
+    .sub--head {
+      font-size: 3.5rem;
+      @media only screen and(max-width: 500px) {
+        font-size: 2.5rem;
+      }
+      letter-spacing: 1rem;
+      font-weight: 400;
+      backface-visibility: hidden;
+      animation: moveLeft 1s linear;
+    }
+    %btn {
+      color: $primary-color;
+      background-color: white;
+      font-size: 2rem;
+      padding: 1rem 4rem;
+      border-radius: 10rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn:link {
+      @extend %btn;
+      margin-top: 2rem;
+      transition: all 0.5s linear;
+    }
+    .btn:visited {
+      @extend %btn;
+    }
+    .btn:hover {
+      background-color: $primary-color;
+      color: white;
+      transition: all 0.5s linear;
+    }
+    .btn--animation {
+      backface-visibility: hidden;
+      animation: moveTop 1s linear;
+    }
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveTop {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  80% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fa-bars{
+  pointer-events: none;
+}

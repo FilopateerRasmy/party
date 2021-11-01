@@ -1,0 +1,51 @@
+#parties {
+  margin-top: 7rem;
+  width: 100%;
+  height: 80vh;
+
+  text-align: center;
+  h2 {
+    color: $secondry-color;
+    font-size: 3rem;
+    padding: 2rem 0rem;
+    letter-spacing: 1rem;
+  }
+  .layer {
+    background-image: linear-gradient(
+        to right,
+        rgba(#000, 0.8),
+        rgba($primary-color, 0.8)
+      ),
+      url(../images/pexels-mark-angelo-1587927.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .time {
+    width: 100%;
+    height: 80%;
+    padding: 0rem 6rem;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    @media only screen and(max-width: 500px) {
+      clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+      height: auto;
+    }
+    @include flex(row, space-between, center);
+    %common {
+      color: $white;
+      flex: 1 1 25rem;
+    }
+    .day {
+      @extend %common;
+    }
+    .hour {
+      @extend %common;
+    }
+    .minutes {
+      @extend %common;
+    }
+    .seconds {
+      @extend %common;
+    }
+  }
+}

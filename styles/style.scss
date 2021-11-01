@@ -1,0 +1,40 @@
+$primary-color: #08317e;
+$secondry-color: #000;
+$white: #fff;
+@mixin flex($dir, $justify, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 3rem;
+}
+ul {
+  list-style: none;
+}
+.hidden {
+  transform: translateY(10rem);
+}
+.active {
+  transition: all 0.8s;
+  transform: translateY(0);
+}
+@import "home";
+@import "about";
+@import "parties";
+@import "contact";
